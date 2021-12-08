@@ -38,6 +38,9 @@ class Line {
    * 3. 从 i 到 size - 1 下标的元素依次往后挪动一位，从最后一个开始（避免数据覆盖）
    * 4. 将元素放入 i 的位置
    * 5. size 加一
+   * size  = 3
+   * i = 2
+   * 
    * @param {*} i 插入数据的位置下标
    * @param {*} val 插入的元素值
    * @returns true插入成功；false插入失败；
@@ -45,7 +48,7 @@ class Line {
   insert (i, val) {
     let res = false;
     if (i >= 0 && i < this.size) {
-      for (let t = this.size - 1; t >= i; t--) {
+      for (let t = this.size - 1; t > i; t--) {
         this.line[t + 1] = this.line[t];
       }
       this.line[i] = val;
