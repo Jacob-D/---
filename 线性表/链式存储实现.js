@@ -97,11 +97,14 @@ class Line {
   }
 }
 
-const line = new Line();
-line.create(['a', 'b', 'c', 'd'])
-line.print()
-line.insert(0, 'begin');
-line.print()
-line.delete(0)
-line.print()
-console.log(line.retrival(0))
+// const line = new Line();
+// line.create(['a', 'b', 'c', 'd'])
+// line.print()
+// line.insert(0, 'begin');
+// line.print()
+// line.delete(0)
+// line.print()
+// console.log(line.retrival(0))
+
+
+module.exports  = Line;
