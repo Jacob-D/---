@@ -79,4 +79,4 @@ line1.create([3, 12, 15, 25]);
 const line2 = new Line();
 line2.create([5, 12, 13, 14]);
 const lineMerge = mergeLinkList(line1, line2);
-console.log(JSON.stringify(lineMerge));
+console.log(JSON.stringify(lineMerge));                                                                                                 
