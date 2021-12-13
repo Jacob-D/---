@@ -8,7 +8,7 @@ class Map {
     this.size = size;
   }
   hash (key) {
-    return key % 11;
+    return key % 11; // 除留取余法一般Mod表长的最大质数
   }
   conflict (curIndex) {
     const step = 1;

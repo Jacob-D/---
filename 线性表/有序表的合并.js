@@ -20,6 +20,10 @@ function mergeSeqlist (La, Lb) {
     } else if (valA > valB) {
       Lc[c] = valB;
       b++;
+    } else {
+      Lc[c] = valA;
+      a++;
+      b++;
     }
     c++;
   }
