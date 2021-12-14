@@ -11,14 +11,24 @@
  * @param {*} list 需排序的列表
  * @param {number[]} cut 计算增量序列函数
  */
-function shellSort (list, cut) {
+function shellSort (list) {
   const steps = cut(list);
-  let s, i, j;
-  while (s >= 0) {
-    s = steps[s];
-    
-    s++;
+  let s, i, j, k = 0, temp;
+  while (k < steps.length) {
+    s = steps[k];
+    for (i = s; i < list.length; i++) {
+      temp = list[i];
+      j = i - s;
+      while (j >=0 && temp < list[j]) {
+        list[j + s] = list[j];
+        j = j - s;
+      }
+      list[j + s] = temp;
+    }
+    k++;
   }
+
+  return list;
 }
 
 /**
@@ -35,3 +45,6 @@ function cut (list) {
   }
   return res
 }
+
+const res = shellSort([3, 70, 2, 0, -1, 40, 100, 8, 2])
+console.log(res)
