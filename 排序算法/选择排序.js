@@ -1,5 +1,5 @@
 /**
- * 选择排序
+ * 算法思想：
  * 默认整个list为无须序列，
  * 从无序子序列中选取最大或最小的值
  * 并将它加入有序子序列中，依此方法增加记录的有序子序列长度
@@ -22,8 +22,6 @@ function selectSort (list) {
   }
   return list;
 }  
-1, 2, 3
-
 
 const res1 = selectSort([3, 70, 2, 0, -1, 40, 100, 8, 2])
 console.log(res1)
